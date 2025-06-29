@@ -24,7 +24,7 @@ export class CdkTsStack extends Stack {
 
     // Lambda Function
     const ingestionFunction = new lambda.Function(this, 'PdfIngestionFunction', {
-      runtime: lambda.Runtime.NODEJS18_X,
+      runtime: lambda.Runtime.NODEJS_18_X,
       handler: 'index.handler',
       code: lambda.Code.fromAsset(path.join(__dirname, '../lambda')),
       environment: {
